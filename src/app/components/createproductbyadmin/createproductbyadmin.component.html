@@ -1,0 +1,209 @@
+
+<app-headerbyadmin></app-headerbyadmin>
+<app-menubyadmin></app-menubyadmin>
+
+
+
+<div class="container">  <div class="col-12 col-sm-12 col-lg-12">
+  <!-- form card register -->
+  <div class="card btn-warning">
+
+   <br><h1>CREATE NEW PRODUCT BY ADMIN :</h1>
+
+    
+    <br>
+
+  </div>
+</div>
+<!-- form card register -->
+</div>
+
+
+
+
+
+<div class="container">  <div class="col-12 col-sm-12 col-lg-12">
+  <!-- form card register -->
+  <div class="card">
+
+
+
+<div class="row justify-content-center">
+    <div class="register-admin">
+      <!-- form card register -->
+      <div class="card-body">
+        <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+
+          <div class="row">
+            <div class="col">
+              <div class="form-group">
+                <label for="inputName">name</label>
+                <input class="form-control" type="text" formControlName="name" />
+                <!-- error -->
+                <div
+                  class="invalid-feedback"
+                  *ngIf="submitted && myForm['name'].errors?.['required']"
+                >
+                name is required.
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                <label for="inputName">description</label>
+                <input class="form-control" type="text" formControlName="description" />
+                <!-- error -->
+                <div
+                  class="invalid-feedback"
+                  *ngIf="submitted && myForm['description'].errors?.['required']"
+                >
+                description is required.
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+
+
+          <div class="row">
+            <div class="col">
+              <div class="form-group">
+                <label for="inputName">categorieid</label>
+                <!-- error -->
+
+                <select class="form-select" formControlName="categorieid">
+  
+                  <option *ngFor="let recouvrement of categorieproduct; let i = index" value="{{recouvrement._id}}">{{recouvrement.name}}</option>
+
+             </select>        
+
+
+
+
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="form-group">
+                <label for="inputName">inventoryid</label>
+                <select class="form-select" formControlName="inventoryid">
+  
+                  <option *ngFor="let recouvrement of inventoryproduct; let i = index" value="{{recouvrement._id}}">{{recouvrement.qte}}</option>
+
+             </select>             <!-- error -->
+
+              </div>
+            </div>
+
+            
+
+          </div>
+
+
+
+
+          <div class="row">
+            <div class="col">
+              <div class="form-group">
+                <label for="inputName">price</label>
+                <input class="form-control" type="text" formControlName="price" />
+                <!-- error -->
+                <div
+                  class="invalid-feedback"
+                  *ngIf="submitted && myForm['price'].errors?.['required']"
+                >
+                price is required.
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="form-group">
+                <label for="inputName">discountid</label>
+                <input class="form-control" type="text" formControlName="discountid" />
+                <!-- error -->
+                <div
+                  class="invalid-feedback"
+                  *ngIf="submitted && myForm['discountid'].errors?.['required']"
+                >
+                discountid is required.
+                </div>
+              </div>
+            </div>
+
+
+
+          </div>
+
+
+          <div class="row">
+            <div class="col">
+              <div class="form-group">
+                <label for="inputName">picture</label>
+                <input class="form-control" type="text" formControlName="picture" />
+                <!-- error -->
+                <div
+                  class="invalid-feedback"
+                  *ngIf="submitted && myForm['picture'].errors?.['required']"
+                >
+                picture is required.
+                </div>
+              </div>
+            </div>
+
+
+
+
+          </div>
+
+
+
+          <div class="form-group">
+            <button class="btn btn-success btn-lg btn-block" type="submit">
+              Adddd
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- form card register -->
+  </div>
+
+
+
+
+
+
+
+
+
+    
+    <br><hr>
+
+  </div>
+</div>
+<!-- form card register -->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<app-footerbyadmin></app-footerbyadmin>

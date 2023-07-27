@@ -1,0 +1,182 @@
+
+<app-headerbyadmin></app-headerbyadmin>
+<app-menubyadmin></app-menubyadmin>
+
+
+
+
+<div class="container">  <div class="col-12 col-sm-12 col-lg-12">
+  <!-- form card register -->
+  <div class="card btn-primary">
+
+   <br><h1>MORE DETAILS :</h1>
+
+    
+    <br>
+
+  </div>
+</div>
+<!-- form card register -->
+</div>
+
+
+
+
+
+<div class="container">  <div class="col-12 col-sm-12 col-lg-12">
+  <!-- form card register -->
+  <div class="card">
+
+
+
+
+
+<div class="row justify-content-center">
+    <div class="register-admin">
+      <!-- form card register -->
+      <div class="card-body">
+        <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+
+          <div class="row">
+            <div class="col">
+              <div class="form-group">
+                <label for="inputName">name</label>
+                <input class="form-control" type="text" formControlName="name" readonly/>
+                <!-- error -->
+                <div
+                  class="invalid-feedback"
+                  *ngIf="submitted && myForm['name'].errors?.['required']"
+                >
+                name is required.
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                <label for="inputName">adresse</label>
+                <input class="form-control" type="text" formControlName="adresse" readonly/>
+                <!-- error -->
+                <div
+                  class="invalid-feedback"
+                  *ngIf="submitted && myForm['adresse'].errors?.['required']"
+                >
+                adresse is required.
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+
+
+
+
+
+          <div class="row">
+            <div class="col">
+              <div class="form-group">
+                <label for="inputName">phone</label>
+                <input class="form-control" type="text" formControlName="phone" readonly/>
+                <!-- error -->
+                <div
+                  class="invalid-feedback"
+                  *ngIf="submitted && myForm['phone'].errors?.['required']"
+                >
+                phone is required.
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                <label for="inputName">specialite</label>
+                <input class="form-control" type="text" formControlName="specialite" readonly/>
+                <!-- error -->
+                <div
+                  class="invalid-feedback"
+                  *ngIf="submitted && myForm['specialite'].errors?.['required']"
+                >
+                specialite is required.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <div class="form-group">
+                <label for="inputName">avatar</label>
+                <input class="form-control" type="text" formControlName="avatar" readonly/>
+                <!-- error -->
+                <div
+                  class="invalid-feedback"
+                  *ngIf="submitted && myForm['avatar'].errors?.['required']"
+                >
+                avatar is required.
+                </div>
+              </div>
+            </div>
+            
+
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <div class="form-group">
+                <label for="inputName">description</label>
+                <input class="form-control" type="text" formControlName="description" readonly/>
+                <!-- error -->
+                <div
+                  class="invalid-feedback"
+                  *ngIf="submitted && myForm['description'].errors?.['required']"
+                >
+                description is required.
+                </div>
+              </div>
+            </div>
+            
+
+          </div>
+
+
+        </form>
+      </div>
+    </div>
+    <!-- form card register -->
+  </div>
+
+
+
+
+
+
+
+
+    
+    <br><hr>
+
+  </div>
+</div>
+<!-- form card register -->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<app-footerbyadmin></app-footerbyadmin>

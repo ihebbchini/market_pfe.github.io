@@ -1,0 +1,132 @@
+
+<app-headerbyadmin></app-headerbyadmin>
+<app-menubyadmin></app-menubyadmin>
+
+
+<div class="container">  <div class="col-12 col-sm-12 col-lg-12">
+  <!-- form card register -->
+  <div class="card btn-success">
+
+   <br><h1>LIST OF DATA :</h1>
+
+    
+    <br>
+
+  </div>
+</div>
+<!-- form card register -->
+</div>
+
+
+
+<div class="container">  <div class="col-12 col-sm-12 col-lg-12">
+  <!-- form card register -->
+  <div class="card btn-danger">
+              <br><br>
+              DATA DISOPONIBLES :{{inventoryproduct.length}}
+              <br><br>
+
+    
+    
+
+  </div>
+</div>
+<!-- form card register -->
+</div>
+
+
+
+
+
+<div class="container">  <div class="col-12 col-sm-12 col-lg-12">
+  <!-- form card register -->
+  <div class="card btn-primary">
+
+
+      <div class="container"><br><hr>
+        <button class="btn btn-lg btn-success" routerLink="/admincreerinventoryproduct/">create new</button>&nbsp;
+        <button class="btn btn-lg btn-info" (click)="openPDF()">Download PDF</button>&nbsp;
+      </div>
+      <br><hr>
+
+    
+    <br><hr>
+
+  </div>
+</div>
+<!-- form card register -->
+</div>
+
+
+
+
+
+
+<div class="container">  <div class="col-12 col-sm-12 col-lg-12">
+  <!-- form card register -->
+  <div class="card btn-primary">
+
+<div class="container">
+    <!-- No data message -->
+    <p *ngIf="inventoryproduct.length <= 0" class="no-data text-center">There is no inventoryproduct added yet!</p>
+    <!-- inventoryproduct list -->
+    <table id="htmlData"  class="table table-bordered" *ngIf="inventoryproduct.length > 0">
+      <thead class="table-success">
+        <tr>
+          <th scope="col">inventoryproduct ID</th>
+          <th scope="col">qte</th>
+          <th scope="col">idproduct</th>
+          <th scope="col">datecreation</th>
+          <th scope="col center">Update</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let inventoryproduct of inventoryproduct; let i = index">
+          <th scope="row">{{inventoryproduct._id}}</th>
+          <td>{{inventoryproduct.qte}}</td>
+          <td>{{inventoryproduct.idproduct}}</td>
+          <td>{{inventoryproduct.datecreation}}</td>
+          <td class="text-center edit-block">
+            <span class="edit" [routerLink]="['/admineditinventoryproduct/', inventoryproduct._id]">
+              <button type="button" class="btn btn-success btn-sm">Edit</button>
+            </span>&nbsp;&nbsp;
+
+            <span class="edit" [routerLink]="['/admindetailinventoryproduct/', inventoryproduct._id]">
+              <button type="button" class="btn btn-info btn-sm">Consulter</button>
+            </span>&nbsp;&nbsp;
+
+
+
+            <span class="delete" (click)="removeinventoryproduct(inventoryproduct, i)">
+              <button type="button" class="btn btn-danger btn-sm">Delete</button>
+            </span>&nbsp;&nbsp;
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+
+    
+    <br><hr>
+
+  </div>
+</div>
+<!-- form card register -->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<app-footerbyadmin></app-footerbyadmin>

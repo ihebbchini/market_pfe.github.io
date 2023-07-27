@@ -1,0 +1,135 @@
+
+<app-headerbyadmin></app-headerbyadmin>
+<app-menubyadmin></app-menubyadmin>
+
+
+<div class="container">  <div class="col-12 col-sm-12 col-lg-12">
+  <!-- form card register -->
+  <div class="card btn-success">
+
+   <br><h1>LIST OF DATA :</h1>
+
+    
+    <br>
+
+  </div>
+</div>
+<!-- form card register -->
+</div>
+
+
+<div class="container">  <div class="col-12 col-sm-12 col-lg-12">
+  <!-- form card register -->
+  <div class="card btn-danger">
+              <br><br>
+              DATA DISOPONIBLES :{{paymentdetail.length}}
+              <br><br>
+
+    
+    
+
+  </div>
+</div>
+<!-- form card register -->
+</div>
+
+
+
+<div class="container">  <div class="col-12 col-sm-12 col-lg-12">
+  <!-- form card register -->
+  <div class="card btn-primary">
+      <div class="container"><br><hr>
+        <button class="btn btn-lg btn-success" routerLink="/admincreerpaimentdetail/">create new</button>&nbsp;
+        <button class="btn btn-lg btn-info" (click)="openPDF()">Download PDF</button>&nbsp;
+      </div>
+      <br><hr>
+
+
+
+    
+    <br><hr>
+
+  </div>
+</div>
+<!-- form card register -->
+</div>
+
+
+
+
+
+
+<div class="container">  <div class="col-12 col-sm-12 col-lg-12">
+  <!-- form card register -->
+  <div class="card btn-primary">
+
+
+<div class="container">
+    <!-- No data message -->
+    <p *ngIf="paymentdetail.length <= 0" class="no-data text-center">There is no paymentdetail added yet!</p>
+    <!-- paymentdetail list -->
+    <table id="htmlData"  class="table table-bordered" *ngIf="paymentdetail.length > 0">
+      <thead class="table-success">
+        <tr>
+          <th scope="col">paymentdetail ID</th>
+          <th scope="col">orderid</th>
+          <th scope="col">amount</th>
+          <th scope="col">provider</th>
+          <th scope="col">status</th>
+          <th scope="col center">Update</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let paymentdetail of paymentdetail; let i = index">
+          <th scope="row">{{paymentdetail._id}}</th>
+          <td>{{paymentdetail.orderid}}</td>
+          <td>{{paymentdetail.amount}}</td>
+          <td>{{paymentdetail.provider}}</td>
+          <td>{{paymentdetail.status}}</td>
+          <td class="text-center edit-block">
+            <span class="edit" [routerLink]="['/admineditpaimentdetail/', paymentdetail._id]">
+              <button type="button" class="btn btn-success btn-sm">Edit</button>
+            </span>&nbsp;&nbsp;
+
+
+            
+
+
+            <span class="edit" [routerLink]="['/admindetailpaimentdetail/', paymentdetail._id]">
+              <button type="button" class="btn btn-info btn-sm">Consulter</button>
+            </span>&nbsp;&nbsp;
+
+
+
+            <span class="delete" (click)="removepaymentdetail(paymentdetail, i)">
+              <button type="button" class="btn btn-danger btn-sm">Delete</button>
+            </span>&nbsp;&nbsp;
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+
+    
+    <br><hr>
+
+  </div>
+</div>
+<!-- form card register -->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<app-footerbyadmin></app-footerbyadmin>

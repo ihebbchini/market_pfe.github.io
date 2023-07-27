@@ -1,0 +1,128 @@
+
+<app-headerbyuser></app-headerbyuser>
+<app-menubyuser></app-menubyuser>
+<div class="container">  <div class="col-12 col-sm-12 col-lg-12">
+  <!-- form card register -->
+  <div class="card btn-success">
+
+   <br><h1>LIST OF DATA :</h1>
+
+    
+    <br>
+
+  </div>
+</div>
+<!-- form card register -->
+</div>
+
+<div class="container">  <div class="col-12 col-sm-12 col-lg-12">
+  <!-- form card register -->
+  <div class="card btn-success">
+              <br><br>
+              DATA DISOPONIBLES :{{carteitem.length}}
+              <br><br>
+
+    
+    
+
+  </div>
+</div>
+<!-- form card register -->
+</div>
+
+
+<div class="container">  <div class="col-12 col-sm-12 col-lg-12">
+  <!-- form card register -->
+  <div class="card btn-primary">
+
+      <div class="container"><br><hr>
+        <button class="btn btn-lg btn-success" routerLink="/usercreercarteitem/">create new</button>&nbsp;
+        <button class="btn btn-lg btn-info" (click)="openPDF()">Download PDF</button>&nbsp;
+      </div>
+
+    
+    <br><hr>
+
+  </div>
+</div>
+<!-- form card register -->
+</div>
+
+
+
+
+
+
+<div class="container">  <div class="col-12 col-sm-12 col-lg-12">
+  <!-- form card register -->
+  <div class="card">
+
+
+<div class="container">
+    <!-- No data message -->
+    <p *ngIf="carteitem.length <= 0" class="no-data text-center">There is no carteitem added yet!</p>
+    <!-- carteitem list -->
+    <table id="htmlData"  class="table table-bordered" *ngIf="carteitem.length > 0">
+      <thead class="table-success">
+        <tr>
+          <th scope="col">carteitem ID</th>
+          <th scope="col">orderid</th>
+          <th scope="col">productid</th>
+          <th scope="col">quantite</th>
+          <th scope="col">datecreation </th>
+          <th scope="col center">Update</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let carteitem of carteitem; let i = index">
+          <th scope="row">{{carteitem._id}}</th>
+          <td>{{carteitem.orderid}}</td>
+          <td>{{carteitem.productid}}</td>
+          <td>{{carteitem.quantite}}</td>
+          <td>{{carteitem.datecreation}}</td>
+          <td class="text-center edit-block">
+            <span class="edit" [routerLink]="['/usereditcarteitem/', carteitem._id]">
+              <button type="button" class="btn btn-success btn-sm">Edit</button>
+            </span>&nbsp;&nbsp;
+
+            <span class="edit" [routerLink]="['/usereditcarteitem/', carteitem._id]">
+              <button type="button" class="btn btn-info btn-sm">Consulter</button>
+            </span>&nbsp;&nbsp;
+
+
+            <span class="delete" (click)="removecarteitem(carteitem, i)">
+              <button type="button" class="btn btn-danger btn-sm">Delete</button>
+            </span>&nbsp;&nbsp;
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+
+
+    
+    <br><hr>
+
+  </div>
+</div>
+<!-- form card register -->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<app-footerbyuser></app-footerbyuser>

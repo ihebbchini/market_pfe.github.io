@@ -1,0 +1,206 @@
+
+<app-headerbyadmin></app-headerbyadmin>
+<app-menubyadmin></app-menubyadmin>
+
+
+
+
+<div class="container">  <div class="col-12 col-sm-12 col-lg-12">
+  <!-- form card register -->
+  <div class="card btn-primary">
+
+   <br><h1>MORE DETAILS :</h1>
+
+    
+    <br>
+
+  </div>
+</div>
+<!-- form card register -->
+</div>
+
+
+
+
+
+
+<div class="container">  <div class="col-12 col-sm-12 col-lg-12">
+  <!-- form card register -->
+  <div class="card">
+
+
+
+<div class="row justify-content-center">
+    <div class="register-admin">
+      <!-- form card register -->
+      <div class="card-body">
+        <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+
+          <div class="row">
+            <div class="col">
+              <div class="form-group">
+                <label for="inputName">name</label>
+                <input class="form-control" type="text" formControlName="name" readonly/>
+                <!-- error -->
+                <div
+                  class="invalid-feedback"
+                  *ngIf="submitted && myForm['name'].errors?.['required']"
+                >
+                name is required.
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                <label for="inputName">description</label>
+                <input class="form-control" type="text" formControlName="description" readonly/>
+                <!-- error -->
+                <div
+                  class="invalid-feedback"
+                  *ngIf="submitted && myForm['description'].errors?.['required']"
+                >
+                description is required.
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+
+
+          <div class="row">
+            <div class="col">
+              <div class="form-group">
+                <label for="inputName">categorieid</label>
+                <input class="form-control" type="text" formControlName="categorieid" readonly/>
+                <!-- error -->
+                <div
+                  class="invalid-feedback"
+                  *ngIf="submitted && myForm['categorieid'].errors?.['required']"
+                >
+                categorieid is required.
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="form-group">
+                <label for="inputName">inventoryid</label>
+                <input class="form-control" type="text" formControlName="inventoryid" readonly/>
+                <!-- error -->
+                <div
+                  class="invalid-feedback"
+                  *ngIf="submitted && myForm['inventoryid'].errors?.['required']"
+                >
+                inventoryid is required.
+                </div>
+              </div>
+            </div>
+
+
+
+          </div>
+
+
+
+
+          <div class="row">
+            <div class="col">
+              <div class="form-group">
+                <label for="inputName">price</label>
+                <input class="form-control" type="text" formControlName="price" readonly/>
+                <!-- error -->
+                <div
+                  class="invalid-feedback"
+                  *ngIf="submitted && myForm['price'].errors?.['required']"
+                >
+                price is required.
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="form-group">
+                <label for="inputName">discountid</label>
+                <input class="form-control" type="text" formControlName="discountid" readonly/>
+                <!-- error -->
+                <div
+                  class="invalid-feedback"
+                  *ngIf="submitted && myForm['discountid'].errors?.['required']"
+                >
+                discountid is required.
+                </div>
+              </div>
+            </div>
+
+
+
+          </div>
+
+
+          <div class="row">
+            <div class="col">
+              <div class="form-group">
+                <label for="inputName">picture</label>
+                <input class="form-control" type="text" formControlName="picture" readonly/>
+                <!-- error -->
+                <div
+                  class="invalid-feedback"
+                  *ngIf="submitted && myForm['picture'].errors?.['required']"
+                >
+                picture is required.
+                </div>
+              </div>
+            </div>
+
+
+
+
+          </div>
+
+
+
+        </form>
+      </div>
+    </div>
+    <!-- form card register -->
+  </div>
+
+
+
+
+
+
+
+
+
+    
+    <br><hr>
+
+  </div>
+</div>
+<!-- form card register -->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<app-footerbyadmin></app-footerbyadmin>

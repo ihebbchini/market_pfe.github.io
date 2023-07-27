@@ -1,0 +1,164 @@
+
+<app-headerbyuser></app-headerbyuser>
+<app-menubyuser></app-menubyuser>
+
+
+
+<div class="container">  <div class="col-12 col-sm-12 col-lg-12">
+  <!-- form card register -->
+  <div class="card">
+
+
+
+    
+    <br><hr>
+
+  </div>
+</div>
+<!-- form card register -->
+</div>
+
+
+
+
+
+
+<div class="container">  <div class="col-12 col-sm-12 col-lg-12">
+  <!-- form card register -->
+  <div class="card">
+
+
+
+
+<div class="row justify-content-center">
+    <div class="register-admin">
+      <!-- form card register -->
+      <div class="card-body">
+        <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+
+          <div class="row">
+            <div class="col">
+              <div class="form-group">
+                <label for="inputName">userid</label>
+                <input class="form-control" type="text" formControlName="userid" />
+                <!-- error -->
+                <div
+                  class="invalid-feedback"
+                  *ngIf="submitted && myForm['userid'].errors?.['required']"
+                >
+                userid is required.
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                <label for="inputName">paimenttype</label>
+                <input class="form-control" type="text" formControlName="paimenttype" />
+                <!-- error -->
+                <div
+                  class="invalid-feedback"
+                  *ngIf="submitted && myForm['paimenttype'].errors?.['required']"
+                >
+                paimenttype is required.
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+
+
+
+
+
+          <div class="row">
+            <div class="col">
+              <div class="form-group">
+                <label for="inputName">provider</label>
+                <input class="form-control" type="text" formControlName="provider" />
+                <!-- error -->
+                <div
+                  class="invalid-feedback"
+                  *ngIf="submitted && myForm['provider'].errors?.['required']"
+                >
+                provider is required.
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                <label for="inputName">acountnumero</label>
+                <input class="form-control" type="text" formControlName="acountnumero" />
+                <!-- error -->
+                <div
+                  class="invalid-feedback"
+                  *ngIf="submitted && myForm['acountnumero'].errors?.['required']"
+                >
+                acountnumero is required.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <div class="form-group">
+                <label for="inputName">dateexpiration</label>
+                <input class="form-control" type="date" formControlName="dateexpiration" />
+                <!-- error -->
+                <div
+                  class="invalid-feedback"
+                  *ngIf="submitted && myForm['dateexpiration'].errors?.['required']"
+                >
+                dateexpiration is required.
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="form-group">
+            <button class="btn btn-warning btn-lg btn-block" type="submit">
+              UPDATE DATA
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- form card register -->
+  </div>
+
+
+
+
+
+
+
+    
+    <br><hr>
+
+  </div>
+</div>
+<!-- form card register -->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<app-footerbyuser></app-footerbyuser>

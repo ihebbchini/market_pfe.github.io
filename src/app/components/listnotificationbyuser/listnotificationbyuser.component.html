@@ -1,0 +1,124 @@
+
+<app-headerbyuser></app-headerbyuser>
+<app-menubyuser></app-menubyuser>
+<div class="container">  <div class="col-12 col-sm-12 col-lg-12">
+  <!-- form card register -->
+  <div class="card btn-success">
+
+   <br><h1>LIST OF DATA :</h1>
+
+    
+    <br>
+
+  </div>
+</div>
+<!-- form card register -->
+</div>
+
+<div class="container">  <div class="col-12 col-sm-12 col-lg-12">
+  <!-- form card register -->
+  <div class="card btn-success">
+              <br><br>
+              DATA DISOPONIBLES :{{notification.length}}
+              <br><br>
+
+    
+    
+
+  </div>
+</div>
+<!-- form card register -->
+</div>
+
+
+<div class="container">  <div class="col-12 col-sm-12 col-lg-12">
+  <!-- form card register -->
+  <div class="card btn-primary">
+
+      <div class="container"><br><hr>
+        <button class="btn btn-lg btn-info" (click)="openPDF()">Download PDF</button>&nbsp;
+      </div>
+      <br><hr>
+
+
+    
+    <br><hr>
+
+  </div>
+</div>
+<!-- form card register -->
+</div>
+
+
+
+
+
+
+<div class="container">  <div class="col-12 col-sm-12 col-lg-12">
+  <!-- form card register -->
+  <div class="card">
+<div class="container">
+    <!-- No data message -->
+    <p *ngIf="notification.length <= 0" class="no-data text-center">There is no notification added yet!</p>
+    <!-- notification list -->
+    <table id="htmlData"  class="table table-bordered" *ngIf="notification.length > 0">
+      <thead class="table-success">
+        <tr>
+          <th scope="col">notification ID</th>
+          <th scope="col">titre</th>
+          <th scope="col">etat</th>
+          <th scope="col">datecreation</th>
+          <th scope="col center">Update</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let notification of notification; let i = index">
+          <th scope="row">{{notification._id}}</th>
+          <td>{{notification.titre}}</td>
+          <td>{{notification.etat}}</td>
+          <td>{{notification.datecreation}}</td>
+          <td class="text-center edit-block">
+
+
+
+            <span class="delete" (click)="removenotification(notification, i)">
+              <button type="button" class="btn btn-danger btn-sm">Delete</button>
+            </span>&nbsp;&nbsp;
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+
+    
+    <br><hr>
+
+  </div>
+</div>
+<!-- form card register -->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<app-footerbyuser></app-footerbyuser>
